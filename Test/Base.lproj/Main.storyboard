@@ -21,7 +21,6 @@
                                 <state key="normal" title="Facebook"/>
                                 <connections>
                                     <action selector="facebookButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GjF-wr-iiW"/>
-                                    <segue destination="Vn8-uS-UPX" kind="show" id="XfQ-eR-9zw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guc-g5-FqV">
@@ -30,21 +29,43 @@
                                 <state key="normal" title="Google"/>
                                 <connections>
                                     <action selector="googleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dj4-Hv-5jy"/>
-                                    <segue destination="Vn8-uS-UPX" kind="show" id="nxf-zw-t8W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odX-sF-K6r">
+                                <rect key="frame" x="88.5" y="516" width="237" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Oakes Cafe"/>
+                                <connections>
+                                    <action selector="uscButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1yK-7X-BSR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AG-f5-Kjo">
+                                <rect key="frame" x="151.5" y="624" width="111" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="Vivas"/>
+                                <connections>
+                                    <action selector="vivasButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJo-e4-xYC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="guc-g5-FqV" firstAttribute="top" secondItem="XLy-Ml-fgE" secondAttribute="bottom" constant="87" id="4VR-Oo-0In"/>
+                            <constraint firstItem="odX-sF-K6r" firstAttribute="top" secondItem="guc-g5-FqV" secondAttribute="bottom" constant="33" id="Aw3-fT-bwi"/>
+                            <constraint firstItem="4AG-f5-Kjo" firstAttribute="top" secondItem="odX-sF-K6r" secondAttribute="bottom" constant="38" id="Grb-4F-h0i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XLy-Ml-fgE" secondAttribute="trailing" id="KdC-Zv-yTD"/>
                             <constraint firstItem="guc-g5-FqV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lbc-3K-rX2"/>
                             <constraint firstItem="XLy-Ml-fgE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="225" id="Rh8-aJ-N0d"/>
+                            <constraint firstItem="odX-sF-K6r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d5G-eH-f1X"/>
+                            <constraint firstItem="4AG-f5-Kjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qFT-rR-qaf"/>
                             <constraint firstItem="XLy-Ml-fgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sXL-Vy-xCS"/>
                             <constraint firstItem="guc-g5-FqV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vpu-oj-TvO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="Vn8-uS-UPX" kind="show" identifier="InitialVCToDestinationVC" id="0zh-4f-g3v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +107,4 @@
             <point key="canvasLocation" x="1028" y="94"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="nxf-zw-t8W"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -9,16 +9,29 @@
 import UIKit
 
 class InitialViewController: UIViewController {
-    var urlToPass: URL!
     
+    var urlToPass: URL!
     
     @IBAction func facebookButtonPressed(_ sender: Any) {
         urlToPass = URL(string: "https://www.facebook.com")
+        performSegue(withIdentifier: "InitialVCToDestinationVC", sender: nil)
     }
     
     @IBAction func googleButtonPressed(_ sender: Any) {
         urlToPass = URL(string: "https://www.google.com")
+        performSegue(withIdentifier: "InitialVCToDestinationVC", sender: nil)
     }
+    
+    @IBAction func uscButtonPressed(_ sender: Any) {
+        urlToPass = URL(string: "https://dining.ucsc.edu/pdf/oakes-menu-2019-20.pdf")
+        performSegue(withIdentifier: "InitialVCToDestinationVC", sender: nil)
+    }
+    
+    @IBAction func vivasButtonPressed(_ sender: Any) {
+        urlToPass = URL(string: "https://dining.ucsc.edu/pdf/vivas-menu.pdf")
+        performSegue(withIdentifier: "InitialVCToDestinationVC", sender: nil)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
