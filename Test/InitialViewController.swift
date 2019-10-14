@@ -29,4 +29,20 @@ class InitialViewController: UIViewController {
         destination.receivedUrl = urlToPass
         urlToPass = nil
     }
+    
+    
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if let urlToPass = urlToPass {
+            // check if your application can open the NSURL instance
+            if !UIApplication.shared.canOpenURL(urlToPass) {
+                let alertController = UIAlertController(title: "Cannot open URL.", message: "This is an invalid URL.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+                alertController.addAction(ok)
+                present(alertController, animated: true, completion: nil)
+            }
+            return UIApplication.shared.canOpenURL(urlToPass)
+        }
+        return false
+    }
 }
